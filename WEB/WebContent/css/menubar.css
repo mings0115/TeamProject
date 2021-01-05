@@ -1,0 +1,162 @@
+.menubar {
+	
+}
+
+.effect {
+	position: relative;
+	display: inline-block;
+}
+
+.effect img {
+	max-width: 100%;
+}
+
+.effect span.text {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	display: none;
+	width: 100%;
+	font-size: 70px;
+	color: #fff;
+	font-weight: 900;
+	text-align: center;
+}
+
+.effect::before, .effect::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all .8s;
+	-webkit-transition: all .8s;
+}
+
+.effect::before {
+	width: 97%;
+	height: 99%;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	width: 0;
+} 
+.effect::after {
+	width: 99%;
+	height: 94%;
+	border-left: 2px solid #000;
+	border-right: 2px solid #000;
+	height: 0;
+}
+
+.effect:hover span.text {
+	display: block;
+}
+
+.effect:hover::before {
+	width: calc(96% + 3px);
+}
+.effect:hover::after {
+	height: calc(95% + 3px);
+}
+
+.menubar_end {
+	border-bottom: groove;
+	border-bottom-width: thin;
+	width: 600;
+	display: block;
+	unicode-bidi: isolate;
+	margin-left: auto; 
+	margin-right : auto;
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+	overflow: hidden;
+	margin-right: auto;
+}
+
+#mmeennuu {
+	display: none;
+}
+
+#mmeennuu:checked ~ .menu {
+	width: 1150px;
+	border-radius: 5px;
+	background-color: transparent;
+	height: 85px;
+}
+
+#mmeennuu:checked ~ .menu>ul {
+	display: block;
+	opacity: 1;
+}
+
+#mmeennuu:checked ~ .menu>.barry {
+	display: none;
+}
+
+.menu {
+	font-family: Helvetica, sans-serif;
+	color: #555;
+	display: block;
+	margin: 30px auto;
+	width: 100px;
+	height: 100px;
+	background-color: #808080;
+	border: 3px solid transparent;
+	border-radius: 50%;
+	overflow: hidden;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+}
+
+.menu div.barry {
+	width: 40px;
+	margin: 35px auto;
+}
+
+.menu div.barry .bar {
+	display: block;
+	width: 100%;
+	height: 5px;
+	margin-top: 3px;
+	border-radius: 2px;
+	background-color: #fff;
+}
+
+.menu ul {
+	opacity: 0;
+	display: none;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	list-style-type: none;
+	padding: 0;
+	width: 1150px;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.menu ul li {
+	display: inline-block;
+}
+
+.menu ul li a {
+	text-decoration: none;
+	padding: 15px 25px;
+	margin: 3px 40px;
+	color: #000;
+	font-size: 30px;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+}
